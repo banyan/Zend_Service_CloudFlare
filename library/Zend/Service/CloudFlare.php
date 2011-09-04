@@ -66,7 +66,7 @@ class Zend_Service_CloudFlare extends Zend_Service_Abstract
     public function __call($name, $arguments)
     {
         if (version_compare(PHP_VERSION, '5.3.0', '<')) {
-			throw new Zend_Service_CloudFlare_Exception('Oops! o_O Tried to call undefined method using __call(). But PHP version is required PHP5.3.0+');
+            throw new Zend_Service_CloudFlare_Exception('Oops! o_O Tried to call undefined method using __call(). But PHP version is required PHP5.3.0+');
         }
 
         $act     = $this->_camelcase2Underscored($name);;
