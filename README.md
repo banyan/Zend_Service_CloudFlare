@@ -1,9 +1,9 @@
-# Zend_Service_CloudFlare - Zend Framework client for CloudFlare Hosting Provider API
+# Zend_Service_CloudFlare
 
 Description
 ---
 
-Zend Framework client for CloudFlare Hosting Provider API
+An easy interface to the CloudFlare Hosting Provider API for Zend Framework.
 
 Official document is [here](https://www.cloudflare.com/docs/host-api.html).
 
