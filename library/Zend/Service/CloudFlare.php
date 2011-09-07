@@ -40,6 +40,8 @@ class Zend_Service_CloudFlare extends Zend_Service_Abstract
 
     /**
      * Period after which HTTP request will timeout in seconds
+     *
+     * @var int
      */
     protected $_httpTimeout = 10;
 
@@ -50,15 +52,28 @@ class Zend_Service_CloudFlare extends Zend_Service_Abstract
      *
      * @return void
      */
-    public function __construct($apiKey)
+    public function __construct($apiKey = null)
     {
         $this->_apiKey = (string) $apiKey;
+    }
+
+    /**
+     * Set API key
+     *
+     * @param  string $apiKey
+     * @return Zend_Service_CloudFlare Provides a fluent interface
+     */
+    public function setApiKey($apiKey)
+    {
+        $this->_apiKey = (string) $apiKey;
+        return $this;
     }
 
     /*
      * Implements everything else like as Object#method_missing of Ruby
      * Any method not defined explicitly will be passed on to the CloudFlare API,
      * and return as json, but it works only PHP 5.3.0+.
+     * __call method can't invoke protected / private method until PHP 5.3.0.
      *
      * @throws Zend_Http_Client_Exception if HTTP request fails or times out
      * @return array
