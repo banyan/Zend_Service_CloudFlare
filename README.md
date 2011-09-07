@@ -7,10 +7,10 @@ An easy interface to the CloudFlare Hosting Provider API for Zend Framework.
 
 Official document is [here](https://www.cloudflare.com/docs/host-api.html).
 
-Problems
+Compatibility
 ---
 
-No unit tests.
+Tested under PHP 5.3.0 With PHPUnit 3.5.15.
 
 Quick start
 ---
@@ -25,5 +25,3 @@ Quick start
     );
 
     $response = $cloudFlare->userCreate($options);
-
-See examples/client.php also.

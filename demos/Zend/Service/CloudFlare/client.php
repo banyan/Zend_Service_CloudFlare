@@ -9,9 +9,9 @@ $apiKey     = "YOUR_API_KEY";
 $cloudFlare = new Zend_Service_CloudFlare($apiKey);
 
 $options = array(
-    "cloudflare_email"    => "***********@sample.com",
-    "cloudflare_pass"     => "*********",
-    "cloudflare_username" => "sample",
+    'cloudflare_email'    => 'bogus@sample.com',
+    'cloudflare_pass'     => 'boguspassword',
+    'cloudflare_username' => 'samplename',
 );
 
 $response = $cloudFlare->userCreate($options);
